@@ -1,7 +1,5 @@
 class collectd_collector {
 
-	exec { 'apt-get update': } -> Package['php5-common'] -> Package['httpd']
-
 	class { 'apache':
 		default_vhost => false,
 		mpm_module    => 'prefork',
